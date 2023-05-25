@@ -3,7 +3,7 @@ import NewBoxForm from "./NewBoxForm";
 import Box from "./Box";
 import { v4 as uuid } from "uuid";
 
-/** Shopping list: manages boxes in the list
+/** Box list: manages boxes in the list
  *
  * State:
  * - boxes: array like [ { height, width, bgColor }, ... ]
@@ -42,6 +42,7 @@ function BoxList() {
 
   return (
     <div className="BoxList">
+      <NewBoxForm addBox={addBox}/>
       {renderBoxes()}
     </div>
   );
